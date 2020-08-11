@@ -7,7 +7,7 @@
   /* Fonts */
   --font: 'Questrial', sans-serif;
   --fontTitle: 'Montserrat', sans-serif;
-  --fontSize: 14px;
+  --fontSize: 14pt;
   --fontTitleWeight: 700;
   /* Fonts Icons */
   --iconsSolidFamily: 'Font Awesome 5 Free';
@@ -51,7 +51,8 @@ img {
   align-items: center;
   display: flex;
   height: var(--HeaderHeight);
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 1rem;
   overflow: hidden;
   z-index: 2;
 }
@@ -141,4 +142,33 @@ img {
 }
 .u-navigation.show::after {
   content: var(--iconTimes);
+}
+
+/* BANNER */
+.banner {
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  height: calc(99vh - var(--HeaderHeight));
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.bannerTitle {
+  font-size: 39.92pt;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.bannerSubtitle {
+  font-size: 16.83pt;
+}
+.bannerButton {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  padding: 0.5rem 2rem;
+  border: none;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: 10.25pt;
 }
