@@ -22,6 +22,11 @@
   --iconTimes: '\f00d';
   --iconGridSquare: '\f009';
   --iconGridList: '\f7a4';
+  --iconFacebook: '\f39e';
+  --iconTwitter: '\f099';
+  --iconGlobe: '\f0ac';
+  --iconInstagram: '\f16d';
+  --iconYoutube: '\f167';
   /* Layout */
   --HeaderHeight: 100px;
   /* Dimensions */
@@ -243,6 +248,7 @@ img {
   color: var(--secondary);
   height: 100%;
   position: absolute;
+  gap: 0.5rem;
   top: 0;
   left: 0;
   opacity: 0;
@@ -255,7 +261,7 @@ img {
 }
 .galleryPictureTexts > figcaption {
   font-size: 2rem;
-  padding-bottom: 0.8rem;
+  padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--secondary);
   height: 1rem;
   z-index: 1;
@@ -272,4 +278,41 @@ img {
 }
 .galleryPictureTexts:hover {
   opacity: 1;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin: 2rem auto;
+}
+.footerText {
+  color: var(--gray);
+}
+.footerUl {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.footerElement {
+  color: var(--gray);
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: var(--iconsBrandsFamily);
+  font-weight: var(--iconsBrandsWeight);
+}
+.footerElement.facebook::after {
+  content: var(--iconFacebook);
+}
+.footerElement.twitter::after {
+  content: var(--iconTwitter);
+}
+.footerElement.web::after {
+  font-family: var(--iconsSolidFamily);
+  font-weight: var(--iconsSolidWeight);
+  content: var(--iconGlobe);
+}
+.footerElement.instagram::after {
+  content: var(--iconInstagram);
 }
