@@ -9,6 +9,7 @@ const templateImages = ({ src, alt, tags, description }) => {
 
   image.src = src;
   image.alt = alt;
+  image.classList.add('galleryImg');
   span.innerHTML = description;
   figcaption.innerHTML = alt;
 

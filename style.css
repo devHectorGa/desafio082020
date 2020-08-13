@@ -10,6 +10,7 @@
   --font: 'Questrial', sans-serif;
   --fontTitle: 'Montserrat', sans-serif;
   --fontSize: calc(2vmin + 1vmax);
+  --fontSizeLaptop: calc(1vmin + 1vmax)
   --fontTitleWeight: 700;
   /* Fonts Icons */
   --iconsSolidFamily: 'Font Awesome 5 Free';
@@ -82,7 +83,6 @@ img {
   margin: 0;
   padding: 0;
 }
-
 .navigationLink {
   color: var(--gray);
   display: block;
@@ -163,6 +163,7 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 0 1rem;
 }
 .bannerTitle {
   font-size: 2.85rem;
@@ -243,6 +244,11 @@ img {
   position: relative;
   margin: 0;
 }
+.galleryPicture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .galleryPictureTexts {
   align-items: center;
   color: var(--secondary);
@@ -260,13 +266,14 @@ img {
   width: 100%;
 }
 .galleryPictureTexts > figcaption {
-  font-size: 2rem;
+  font-size: 1.2rem;
   padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--secondary);
   height: 1rem;
   z-index: 1;
 }
 .galleryPictureTexts > span {
+  font-size: 0.8rem;
   z-index: 1;
 }
 .galleryPictureTexts::before {
@@ -315,4 +322,57 @@ img {
 }
 .footerElement.instagram::after {
   content: var(--iconInstagram);
+}
+.footerElement.youtube::after {
+  content: var(--iconYoutube);
+}
+
+@media screen and (min-width: 768px) {
+  /* HEADER */
+  .header {
+    justify-content: space-around;
+  }
+  .navigation {
+    position: initial;
+    height: initial;
+    width: initial;
+  }
+  .navigationUl {
+    justify-content: end;
+    flex-direction: row;
+  }
+  .navigationLink {
+    padding: 2rem 1rem;
+  }
+  .navigationButton {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .navigationButtonSearch {
+    padding: 2rem 1rem;
+  }
+  .u-menu {
+    transform: translate(0);
+  }
+
+  /* GALLERY */
+  .galleryPictures {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-auto-flow: row dense;
+  }
+  .u-row2 {
+    grid-row: span 2;
+  }
+  .u-col2 {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: var(--fontSizeLaptop);
+  }
+  .galleryPictures {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

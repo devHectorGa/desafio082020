@@ -20,6 +20,23 @@ function render(images) {
   });
 
   gallery.appendChild(galleryPictures);
+
+  const galleryPicturesClient = document.getElementsByClassName(
+    'galleryPicture'
+  );
+
+  for (let i = 0; i < galleryPicturesClient.length; i++) {
+    let image = galleryPicturesClient[i].getElementsByClassName(
+      'galleryImg'
+    )[0];
+    let imageHeight = image.naturalHeight;
+    let imageWidth = image.naturalWidth;
+    if (imageHeight > imageWidth + imageWidth * 0.2) {
+      galleryPicturesClient[i].classList.add('u-row2');
+    } else if (imageWidth > imageHeight + imageHeight * 0.3) {
+      galleryPicturesClient[i].classList.add('u-col2');
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', render(data.images));
