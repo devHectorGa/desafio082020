@@ -28,19 +28,23 @@
       <nav id="navigation" class="navigation u-menu">
         <ul class="navigationUl">
           <li class="navigationElement">
-            <a class="navigationLink" href="./#gallery">All</a>
+            <a class="navigationLink" data-filter="all" href="#gallery">All</a>
           </li>
           <li class="navigationElement">
-            <a class="navigationLink" href="./#gallery">Branding</a>
+            <a class="navigationLink" data-filter="branding" href="#gallery"
+              >Branding</a
+            >
           </li>
           <li class="navigationElement">
-            <a class="navigationLink" href="./#gallery">Web</a>
+            <a class="navigationLink" data-filter="web" href="#gallery">Web</a>
           </li>
           <li class="navigationElement">
-            <a class="navigationLink" href="./#gallery">Photography</a>
+            <a class="navigationLink" data-filter="photography" href="#gallery"
+              >Photography</a
+            >
           </li>
-          <li class="navigationElement">
-            <a class="navigationLink" href="./#gallery">App</a>
+          <li class="navigationElement app">
+            <a class="navigationLink" href="#gallery">App</a>
           </li>
           <li class="navigationElement">
             <button class="navigationButtonSearch" href="#"></button>
@@ -64,19 +68,35 @@
       <nav class="galleryNavigation">
         <ul class="galleryNavigationUl">
           <li class="galleryNavigationElement">
-            <a class="galleryNavigationLink" href="#gallery">All</a>
+            <a class="galleryNavigationLink" data-filter="all" href="#gallery"
+              >All</a
+            >
           </li>
           <li class="galleryNavigationElement">
-            <a class="galleryNavigationLink" href="#gallery">Branding</a>
+            <a
+              class="galleryNavigationLink"
+              data-filter="branding"
+              href="#gallery"
+              >Branding</a
+            >
           </li>
           <li class="galleryNavigationElement">
-            <a class="galleryNavigationLink" href="#gallery">Web</a>
+            <a class="galleryNavigationLink" data-filter="web" href="#gallery"
+              >Web</a
+            >
           </li>
           <li class="galleryNavigationElement">
-            <a class="galleryNavigationLink" href="#gallery">Photography</a>
+            <a
+              class="galleryNavigationLink"
+              data-filter="photography"
+              href="#gallery"
+              >Photography</a
+            >
           </li>
           <li class="galleryNavigationElement">
-            <a class="galleryNavigationLink" href="#gallery">App</a>
+            <a class="galleryNavigationLink" data-filter="app" href="#gallery"
+              >App</a
+            >
           </li>
         </ul>
       </nav>
@@ -124,6 +144,6 @@
         </li>
       </ul>
     </footer>
-    <script type="module" src="./script.js" async></script>
   </body>
+  <script type="module" src="./script.js" async></script>
 </html>

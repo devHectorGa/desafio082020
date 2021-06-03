@@ -376,3 +376,26 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* FILTER ELEMENTS */
+
+.galleryPictures.branding > .galleryPicture,
+.galleryPictures.web > .galleryPicture,
+.galleryPictures.app > .galleryPicture,
+.galleryPictures.photography > .galleryPicture
+ {
+  display: none;
+}
+
+.galleryPictures.branding > .galleryPicture.branding {
+  display: initial;
+}
+.galleryPictures.web > .galleryPicture.web {
+  display: initial;
+}
+.galleryPictures.app > .galleryPicture.app {
+  display: initial;
+}
+.galleryPictures.photography > .galleryPicture.branding {
+  display: initial;
+}

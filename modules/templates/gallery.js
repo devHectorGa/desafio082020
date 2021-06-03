@@ -3,8 +3,6 @@ const templateImages = ({ src, alt, tags, description }) => {
     divTexts = document.createElement('div'),
     image = document.createElement('img'),
     span = document.createElement('span'),
-    tagsUl = document.createElement('ul'),
-    tagsLi = document.createElement('li'),
     figcaption = document.createElement('figcaption');
 
   image.src = src;
@@ -18,6 +16,7 @@ const templateImages = ({ src, alt, tags, description }) => {
   divTexts.appendChild(span);
 
   figure.classList.add('galleryPicture');
+  tags.map((tag) => figure.classList.add(tag));
 
   figure.appendChild(image);
   figure.appendChild(divTexts);
